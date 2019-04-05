@@ -2,10 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Static Site Boilerplate</title>
     <meta name="description" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-
+<div id="page">
+  <div id="main" class="w-90-m w-70-l center mb5-ns">
+    <header class="tc pt1 mt5-ns">
+      <h1 class="f1-ns mt4 mb3 tracked">SNI Electronics</h1>
+      <img id="nav-about" src="images/about_hover.png"/>
+      <img id="nav-contact" src="images/contact_hover.png"/>
+      <div id="nav-links-wrapper">
+        <div id="nav-links" class="center flex justify-around ph3 pv1">
+          <div onclick="showAbout()">
+            <span>About</span>
+          </div>
+          <div onclick="showContact()">
+            <span>Contact</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="about" class="content pa3 pa4-ns flex flex-wrap">
+      <div class="w-100 w-50-l">
+        <h3>We are an independent distributor of electronic parts since 2000, founded in New York, USA. In 2008, SNI Electronics moved to Georgia, USA where the main office is currently located.</h3>
+        <p>We wholesale OEM excess parts, exporting mainly to South Korea and Japan. We have been a purchasing agent for Hanwha Thales (formerly known as Samsung Thales) since 2000, with our partner company Dain Semicom Inc. in Korea.</p>
+        <p>We are an authorized distributor of Kaydon and Timken for the Korean market, as well as Pico Electronics and Ledtronics. We also have a strong purchasing line for Altera, Analog Device, and Texas Instruments. We have 15 years of experience in specialized military parts.</p>
+      </div>
+      <div class="w-100 w-50-l">
+        <div class="pl5-l">
+          <h3 class="i">Purchasing Agent for</h3>
+          <img src="images/samsung_thales.jpg"/>
+          <img src="images/samsung_techwin.jpg"/>
+          <br><br>
+          <h3 class="i">Authorized Distributor of</h3>
+          <img src="images/kaydon.jpg"/>
+          <img src="images/timken.jpg"/>
+          <img src="images/pico.jpg"/>
+          <img src="images/ledtronics.jpg"/>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="content pa3 pa4-ns flex flex-wrap tc">
+      <div class="mb4">
+        <h3>Contact</h3>
+        <p><b>tel:</b> (678) 957-9220</p>
+        <p><b>fax:</b> (678) 957-9224</p>
+        <p>sales@snielec.com</p>
+      </div>
+      <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16105.97185551385!2d-84.07688692234825!3d34.02313893047283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f597d85e67e3fb%3A0x943c6797fde78045!2s1156+Satellite+Blvd%2C+Suwanee%2C+GA+30024!5e0!3m2!1sen!2sus!4v1554432821604!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<script>
+  function showAbout() {
+    $('#nav-about').show();
+    $('#nav-contact').hide();
+    $('#about').show();
+    $('#contact').hide();
+  }
+  function showContact() {
+    $('#nav-about').hide();
+    $('#nav-contact').show();
+    $('#about').hide();
+    $('#contact').show();
+  }
+</script>
 </body>
 </html>

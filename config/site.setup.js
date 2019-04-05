@@ -79,7 +79,7 @@ async function runSetup() {
       '// Load CSS Reset from NPM\n'
       + '@import "~' + questions.cssreset + '"\n';
 
-    fs.writeFile('./../src/stylesheets/styles.scss', cssContent, (err) => {});
+    fs.writeFile('./../src/css/styles.scss', cssContent, (err) => {});
   }
 
   // Add jQuery to scripts
@@ -90,7 +90,7 @@ async function runSetup() {
       + 'window.jQuery = $;\n'
       + 'window.$ = $;\n';
 
-    fs.writeFile('./../src/javascripts/scripts.js', jsContent, (err) => {});
+    fs.writeFile('./../src/js/scripts.js', jsContent, (err) => {});
   }
 };
 
